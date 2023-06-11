@@ -1,0 +1,17 @@
+
+https://github.com/q3aql/aria2-static-builds#ca-certificates-on-windows-https
+
+CA Certificates on Windows (HTTPS):
+
+To perform downloads using HTTPS, is necessary the ca-certificates. For default, Linux binaries read the certificates from /etc/ssl/certs/ca-certificates.crt, but with Windows binaries are necessary define the path of certificates.
+You can define the path of the certificates permanently using aria2.conf located on C:\Users\<user>\.aria2\. If you use Windows XP, the file is located on C:\Documents and settings\<user>\.aria2\. For example, you just have to add the following line:
+
+ca-certificate=C:\Program Files\aria2\certs\ca-certificates.crt
+
+If you prefer load the certificates manually, you can use the following command:
+
+C:\PATH\> aria2c --ca-certificate=<PATH-TO-CERTIFICATE> <URL>
+
+Also, is possible disable the use of certificates with the following command:
+
+C:\PATH\> aria2c --check-certificate=false <URL>
