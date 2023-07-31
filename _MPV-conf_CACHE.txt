@@ -1,0 +1,7 @@
+
+cache=yes
+
+cache-secs=600
+
+demuxer-max-bytes=1G		# кеш вперёд от текущего места
+demuxer-max-back-bytes=1G	# кеш назад от текущего места
